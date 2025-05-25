@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.full-web {
+    display: flex;
+    flex-direction: row;
+background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    width: 100%;
+    height: 100vh;
+    text-decoration: none;
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    font-weight: 450;
+   
+}
+
+.spotlight {
+    position: fixed;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(56, 105, 126, 0.3) 0%,      /* soft inner blue */
+        rgba(32, 58, 67, 0.15) 50%,     /* mid transition */
+        rgba(15, 32, 39, 0.05) 100%     /* matches darkest background */
+    );
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 1;
+    transition: transform 0.1s ease-out;
+}
+
+#about{
+    height: 100vh;
+    width: 100%;
+    font-family: "Jost", sans-serif;
+    z-index: 10;
+  
+}
+
+.full-1 {
+    flex: 0.4;
+    height: 100vh;
+        position: sticky; /* Keeps it sticky */
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.full-1-content {
+    position: relative;
+    width: 80%; /* or any suitable width */
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateX(6%);
+}
+
+.name,
+.full-1 p,
+.index-links,
+.social-links {
+    position: absolute;
+    z-index: 10; /* reset this if it was absolute */
+}
+
+.name{
+    top: 9%;
+    font-family: "Cal Sans", sans-serif;
+  font-weight: 300;
+  font-size: 23px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.719);
+}
+
+
+
+.name h3{
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.full-1 p{
+    top: 32%;
+    font-size: 18px;
+    font-family: "Reem Kufi", sans-serif;
+   width: 60%;
+
+}
+
+.full-1 span{
+    font-weight: 1000;
+    font-family: "Lobster", sans-serif;
+    color: rgb(42, 224, 248);
+}
+
+.full-2 .about-text span{
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: "Lobster", sans-serif;
+    color: rgb(42, 224, 248);
+}
+.index-links{
+    top: 50%;
+    transform: translateX(50px);
+    list-style: none;
+}
+
+.social-links{
+    top: 80%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+}
+.index-links li a{
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.index-links li{
+    padding-bottom: 10px;
+}
+
+.index-links li a:hover{
+    color: rgba(255, 255, 255, 0.829);
+}
+
+.social-links li{
+    padding-right: 20px;
+}
+
+.social-links li a{
+    font-size: 30px;
+    color: white;
+    z-index: 10;
+    
+     transition: all 0.3s ease-in-out;
+}
+.social-links li a:hover{
+    color: rgb(14, 203, 228);
+
+}
+
+
+.index-links li {
+  position: relative;
+}
+
+.index-links li a::after {
+  content: "";
+  position: absolute;
+  left: -50px;
+  bottom: 0;
+  width: 20px;
+  transform: translateY(-20px);
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.index-links li a:hover::after {
+  width: 45px;
+  height: 3px;
+}
+
+
+.full-2 {
+    flex: 0.6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    align-items: flex-start;
+    z-index: 10;
+}
+.about-text{
+    height: 80vh;
+   padding: 10%;
+    position: relative;
+    z-index: 10;
+ 
+    
+  
+}
+
+.resume{
+    transform: translateX(45%);
+    border: none;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    background:transparent;
+    margin-bottom: 10%;
+
+}
+
+.resume a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+     font-family: "Pacifico", cursive;
+     transition: all 0.4s ease-in-out;
+     z-index: 10;
+}
+
+.resume span{
+    transform: translateY(2px);
+    font-size: 20px;
+    transition: all 0.4s ease-in-out;
+    z-index: 10;
+}
+
+.resume a:hover{
+    color: rgb(204, 204, 209);
+}
+
+.resume a:hover span{
+    font-size: 30px;
+}
+
+.full-1 a {
+    text-decoration: none;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#project{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: "Jost", sans-serif;
+    z-index: 10;
+}
+
+#project header{
+    position: absolute;
+
+}
+
+.project-grid{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    padding: 7%;
+    padding-top: 13%;
+    gap: 3rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.project-grid .proj{
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    transition: box-shadow 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    
+}
+
+.project-grid .proj:hover{
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.project-grid .proj:hover .layer{
+    opacity: 1;
+}
+
+.project-grid .proj:hover .proj-h1{
+    opacity: 1;
+}
+
+.project-grid .proj:hover .proj-p{
+    opacity: 1;
+}
+
+.project-grid .proj .layer{
+    
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(15, 32, 39, 0.7);
+    padding-top: 80px;
+    padding-left: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.project-grid .proj .layer a{
+    text-decoration: none;
+    color:rgb(42, 224, 248);
+}
+
+.proj-h1{
+    color: rgb(42, 224, 248);
+    top: 60%;
+    font-size: 22px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.proj-p{
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+.project-grid .proj.n1{
+    background-image: url(gym1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    
+}
+
+.project-grid .proj.n2{
+    background-image: url(eye-detection.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    
+}
+
+.project-grid .proj.n3{
+    background-image: url(adidas.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    
+}
+
+#contact{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: "Jost", sans-serif;
+    z-index: 10;
+}
+
+#contact header{
+    position: absolute;
+
+}
+
+.contact-card{
+    height: 100vh;
+    width: 100%;
+    
+}
+
+
+
+
+.intro{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 11;
+   
+}
+    
+.intro-text{
+    color: white;
+    font-size: 3vw;
+    font-family: "Jost", sans-serif;
+
+}
+
+.hide{
+    padding: 12px;
+}
+
+.slider{
+    position: fixed;
+    top: 0;
+    left: 0;
+background: linear-gradient(to right, #173c52, #2a4c60);
+
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translateY(100%);
+
+}
+
+.hide{
+    background-color: black;
+    overflow: hidden;
+}
+.hide span{
+    transform: translateY(100%);
+    display: inline-block;
+}
+
