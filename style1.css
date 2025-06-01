@@ -421,3 +421,81 @@ background: linear-gradient(to right, #173c52, #2a4c60);
     display: inline-block;
 }
 
+.contact-card{
+    padding: 15%;
+    padding-top: 15%;
+    
+}
+
+
+
+form input {
+    width: 100%;
+    outline: none;
+    border: 0;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 20px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+form textarea {
+    width: 100%;
+    outline: none;
+    border: 0;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 20px;
+    font-size: 18px;
+    resize: none;
+    height: 150px; /* adjust this value as needed */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card button{
+    border: 0;
+    border-radius: 40px;
+    width: 50%;
+    padding: 10px;
+    display: block;
+    margin: 20px auto;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.6);
+    transition: transform 0.4s ease, background-color 0.4s ease , color 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+   
+}
+
+.contact-card button:hover{
+    background: rgba(255, 255, 255, 0.5);
+    color: rgb(15, 15, 15);
+    transform: scale(1.1);
+
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* soft white */
+}
+
+
+#msg{
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}

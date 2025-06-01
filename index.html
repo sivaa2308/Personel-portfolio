@@ -126,6 +126,13 @@ arrow_outward
             <section id="contact">
                 <header><h2>Contact</h2></header>
                 <div class="contact-card">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message"  placeholder="Your Message"></textarea>
+                        <button type="submit">submit</button>
+                    </form>
+                    <span id="msg"></span>
 
                 </div>
 
@@ -160,5 +167,24 @@ arrow_outward
      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="style.js"></script>
+
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw0hAq2rcbf_eZXyej3bD9YDTFdxXD9wc0LbXWCxNSoNyq3O2MeTrN71cgHrJHtsisj/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response =>{
+        msg.innerHTML="Message Sent Succesfully"
+        setTimeout(function(){
+            msg.innerHTML=""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 </html>
