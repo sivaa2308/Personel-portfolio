@@ -74,5 +74,28 @@ navLinks.forEach(link => {
 
 
 
+const projwindow = document.getElementById("proj-window");
+const closebtn = document.getElementById("close");
+const fullweb = document.getElementById("full-web");
+const seemore = document.getElementById("see-more");
+
+seemore.addEventListener("click", () => {
+
+  fullweb.style.display = "none";
+  projwindow.style.display = "flex";
+
+setTimeout(() => {
+    projwindow.classList.add("show");
+  }, 10); 
+});
+
+closebtn.addEventListener("click", () => {
+  projwindow.classList.remove("show");
+
+  setTimeout(() => {
+    projwindow.style.display = "none";
+    fullweb.style.display = "";
+  }, 200); 
+});
 
 
