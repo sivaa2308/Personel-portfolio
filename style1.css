@@ -481,6 +481,13 @@
     
 }
 
+.proj-window-card .proj-w.n4{
+    background-image: url(food_6.png);
+      background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   z-index: 100;
+}
 
 
 
@@ -565,6 +572,13 @@
   background-position: center;
   background-repeat: no-repeat;
     
+}
+
+.project-grid .proj.n4{
+    background-image: url(food_6.png);
+      background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #contact{
